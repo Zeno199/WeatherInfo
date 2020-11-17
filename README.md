@@ -13,7 +13,6 @@ node app.js
 ## Structure
 .
 ├── app.js  # Main progrgram run cronJob for crawling every 1 hour.
-
 ├── config.json # Settings
 ├── package.json  # npm package
 ├── swagger.json  # Swagger Sturcture
@@ -21,6 +20,10 @@ node app.js
 │   ├── crawl.js  # Crawl from central weather and insert record.
 │   └── ts_compare.js # Compare the reocrd of lastest time from database. If it is latest, it won't insert the new record
 ├── _libs
+
 │   └── db.js # db settings
+
 └── _models
+
     └── WeatherInfo.js # Schema as ORM for recording data
+    
