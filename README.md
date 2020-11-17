@@ -13,6 +13,7 @@ node app.js
 ## Structure
 .
 ├── app.js  # Main progrgram run cronJob for crawling every 1 hour.
+
 ├── config.json # Settings
 ├── package.json  # npm package
 ├── swagger.json  # Swagger Sturcture
