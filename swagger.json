@@ -1,0 +1,130 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Central Weather",
+        "description": "We get weather~"
+        
+    },
+    "tags": [
+        {
+            "name": "Weather",
+            "description": "API for in the system"
+        }
+    ],
+    "consumes": [
+        "text/plain; charset=utf-8",
+        "text/html"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/weather": {
+            "get": {
+                "tags": [
+                    "Weather information"
+                ],
+                "parameters": [
+                    {
+                        "name": "time_summary",
+                        "in": "query",
+                        "description":  "天氣簡要, 輸入：多雲, 晴時多雲等",
+                        "type": "string"
+                    },
+                    {
+                        "name": "lowest_tempature",
+                        "in": "query",
+                        "description":  "最低溫度 ex: 22",
+                        "type": "int"
+                    },
+                    {
+                        "name": "highest_tempature",
+                        "in": "query",
+                        "description":  "最高溫度 ex: 22",
+                        "type": "int"
+                    },
+                    {
+                        "name": "precipitation",
+                        "in": "query",
+                        "description":  "降雨機率 ex: 10",
+                        "type": "int"
+                    },
+                    {
+                        "name": "feel",
+                        "in": "query",
+                        "description":  "體感, 輸入：舒適",
+                        "type": "string"
+                    },
+                    {
+                      "name": "location",
+                      "in": "query",
+                      "description":  "地點, 輸入：台北, 新北, 桃園",
+                      "type": "string"
+                    },
+                    {
+                        "name": "start_time",
+                        "in": "query",
+                        "description":  "日期 輸入:2020-11-17 06:00:00",
+                        "type": "string"
+                    },
+                    {
+                        "name": "end_time",
+                        "in": "query",
+                        "description":  "日期 輸入:2020-11-17 06:00:00",
+                        "type": "string"
+                    },
+                    {
+                        "name": "records",
+                        "in": "query",
+                        "description":  "筆數 輸入:1, 2... 預設 100",
+                        "type": "int"
+                    }
+                  ]                
+                ,
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Weather"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Weather": {
+            "type": "object",
+            "properties": {
+                "time_summary": {
+                    "type": "string"
+                },
+                "lowest_tempature": {
+                    "type": "integer"
+                },
+                "highest_tempature" : {
+                    "type": "integer"
+                },
+                "precipitation" : {
+                    "type": "string"
+                },
+                "feel" : {
+                    "type": "string"
+                },
+                "location" : {
+                    "type": "string"
+                },
+                "start_time" : {
+                    "type": "string"
+                },
+                "end_time" : {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
