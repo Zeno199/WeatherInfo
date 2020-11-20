@@ -25,7 +25,7 @@ project
 │
 │   
 └───models
-|   │   WeatherInfo.js # Schema as ORM for recording data
+|   │   WeatherInfo.js # Schema for recording data
 |
 |
 |
