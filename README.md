@@ -7,6 +7,7 @@ http://54.150.93.188:3000/api-docs/?fbclid=IwAR1lEYjtWin0GaxRgkB8kNSCZQ0OrurBi_R
 ## Usage 
 
 ```
+npm install
 node app.js
 ```
 
