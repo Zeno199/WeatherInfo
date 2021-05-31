@@ -2,7 +2,6 @@
 
 A nodejs module for crawling weather information and present by Swagger.
 
-http://54.150.93.188:3000/api-docs/?fbclid=IwAR1lEYjtWin0GaxRgkB8kNSCZQ0OrurBi_RNMG2dqMUDowZ-LhuQU1WsF6w#/Weather%20information/get_weather
 
 ## Usage 
 
